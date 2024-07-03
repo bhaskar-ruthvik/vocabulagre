@@ -23,7 +23,7 @@ export default async function Page({params}: {params: {wordId: string}}){
     const words = await fetchData(params.wordId);
     return (
         <div className="flex justify-center">
-        <div className="lg:w-[50%] md:w-[80%] w-[90%] px-4 mt-5">
+        <div className="md:w-[90%] w-[90%] px-4 mt-5">
           
            {words.map((data,index)=>{
            

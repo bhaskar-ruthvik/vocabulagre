@@ -13,11 +13,11 @@ async function fetchWords(userId: string): Promise<DocumentData[]>{
 export default async function Words(props: {userId: string,apiKey: string}){
     const words = await fetchWords(props.userId)
     return <div className="flex justify-center">
-        <div className="grid grid-rows-10 grid-cols-1 lg:w-[50%] md:w-[80%] w-[95%]">
-        <div className="flex justify-center w-full">
+        <div className="flex-col md:w-[90%] w-[95%]">
+        <div className="flex justify-center w-full h-[6vh] my-4">
         <WordInput userId={props.userId} apiKey={props.apiKey} />
     </div>
-        <div className="row-span-9 grid lg:grid-cols-3 md:grid-cols-2 px-4 py-4 gap-3">
+        <div className="h-[84vh] overflow-scroll grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 px-4 py-4 gap-3">
         {
             words.map((data,index)=>{
               return <WordCard key={index} index={index} data={data} />

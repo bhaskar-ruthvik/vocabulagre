@@ -10,7 +10,7 @@ export default function WordCard(props: {index: number, data: DocumentData}){
         router.push(`/word/${wordId}`)
     }
     return (
-        <Card key={props.index} className="bg-zinc-900" onClick={()=>{clickOnCard(props.data.word)}}>
+        <Card key={props.index} className="bg-zinc-900 hover:opacity-[0.85]" onClick={()=>{clickOnCard(props.data.word)}}>
                 <CardHeader className="md:pb-4 pb-2 font-semibold text-xl">
                     {props.data.word[0].toUpperCase() + props.data.word.slice(1)}
                 </CardHeader>

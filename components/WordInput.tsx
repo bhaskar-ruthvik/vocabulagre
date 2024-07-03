@@ -5,6 +5,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { Plus } from "lucide-react";
 import { redirect, useRouter } from "next/navigation";
 import { useState } from "react";
+import { Button } from "./ui/button";
 
 export default function WordInput(props: {userId: string,apiKey: string}){
     const router = useRouter();
@@ -27,8 +28,8 @@ export default function WordInput(props: {userId: string,apiKey: string}){
     }
     return (
              <div className="flex justify-start px-10 items-center">
-            <Plus onClick={addToStore}/>
-            <input className="dark pl-2 bg-transparent border-b-2 focus:outline-none h-[60%]" type="text" placeholder="Enter a word" onChange={({target})=>setWord(target.value)}></input>
+            <input className="dark mr-2 pl-2 bg-transparent border-b-2 focus:outline-none h-[80%]" type="text" placeholder="Enter a word" onChange={({target})=>setWord(target.value)}></input>
+            <Button className="mt-1 p-2 bg-neutral-700 hover:bg-neutral-800"><Plus onClick={addToStore} color="white"/></Button>
         </div>
        
 
