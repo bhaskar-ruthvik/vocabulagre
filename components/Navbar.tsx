@@ -10,12 +10,12 @@ const quicksand = Quicksand({subsets: ["latin"]})
 export default function Navbar(){
     return (
         <div className="flex justify-center">
-              <div className="grid grid-cols-3 grid-row-1 py-4 px-4 items-center md:w-[90%] w-[90%]">
+              <div className="grid lg:grid-cols-3 grid-cols-2 grid-row-1 py-4 px-4 items-center md:w-[90%] w-[90%]">
             <div className="flex">
          
          <Link href={'/'} className="p-0">   <h1 className={"font-medium px-2" + quicksand.className} >📚 VocabulaGRE</h1></Link>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center lg:inline-flex hidden">
             <TabSwitcher />
             </div>
           <div className="flex justify-end">
