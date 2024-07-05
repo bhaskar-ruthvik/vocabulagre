@@ -11,10 +11,9 @@ export default function Home() {
     redirect("/user/login")
   }
   return (
-    <div>
+    <div className="flex-col">
         <Navbar />
         <Words userId={userId} apiKey={process.env.THESAURUS_API_KEY!}/>
-
     </div>
  
   );
